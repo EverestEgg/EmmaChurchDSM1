@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Icon Template Percentage</title>
+        <style>
+            .row{
+                margin-top:40px;
+            }
+            .left-column{
+                float:left;
+                width:30%;
+                margin-left:30px;
+            }
+            .center-column{
+                width:30%;
+                margin:auto;
+            }
+            .right-column{
+                float:right;
+                width:30%;
+                margin:auto;
+            }
+            .image-container{
+                display: table-cell;
+                vertical-align: middle;
+                margin: auto;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="row">
+            <div class="left-column"><div class="image-container"><img Id="roud" src="img/cir.png" height="200" width="200"/></div></div>
+            <div class="right-column"><div class="image-container"><img Id="sqer" src="img/tri.png" height="200" width="200"/></div></div>
+            <div class="center-column"><div class="image-container"><img src="img/squ.png" height="200" width="200"/></div></div>
+        </div>
+
+        <div class="row">
+            <div class="left-column"><div class="image-container"><img src="img/hex.png" height="200" width="200"/></div></div>
+            <div class="right-column"><div class="image-container"><img src="img/rec.png" height="200" width="200"/></div></div>
+            <div class="center-column"><div class="image-container"><img src="img/sta.png" height="200" width="200"/></div></div>
+        </div>
+
+        <div class="row">
+            <div class="left-column"><div class="image-container"><img src="img/trr.png" height="200" width="200"/></div></div>
+            <div class="right-column"><div class="image-container"><img src="img/sqr.png" height="200" width="200"/></div></div>
+            <div class="center-column"><div class="image-container"><img src="img/her.png" height="200" width="200"/></div></div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.1.2/buzz.min.js"></script>
+
+        <script>
+
+            const wiggle = new buzz.sound ("w6 s1/PaperWiggle2.wav")
+            const door = new buzz.sound ("w6 s1/door2.wav")
+
+            document.getElementById ("roud").onpointerdown = () => {
+                console.log("hello world")
+                wiggle.play ()
+            }
+
+            document.getElementById ("sqer").onpointerdown = () => {
+                door.play ()
+             }
+
+        </script>
+
+
+    </body>
+    
+</html>
