@@ -5,26 +5,13 @@
         <title>Emma Testing</title>
         <style>
             .row{
-                margin-top:40px;
+                width:720px;
+                margin: 10px auto 10px auto ;
             }
-            .left-column{
-                float:left;
-                width:30%;
-                margin-left:30px;
-            }
-            .center-column{
-                width:30%;
-                margin:auto;
-            }
-            .right-column{
-                float:right;
-                width:30%;
-                margin:auto;
-            }
-            .image-container{
+            .image-container {
                 display: table-cell;
                 vertical-align: middle;
-                margin: auto;
+                padding:20px;
             }
         </style>
     </head>
@@ -32,24 +19,21 @@
     <body>
 
         <div class="row">
-            <div class="left-column"><div class="image-container"><img Id="roud" src="img/BRAM.png" height="240" width="200"
-                onmouseover="this.src='img/Draculat@3x.png' ;"
-                onmouseout="this.src='img/BRAM.png';"
-                /></div></div>
-            <div class="right-column"><div class="image-container"><img Id="sqer" src="img/tri.png" height="240" width="200"/></div></div>
-            <div class="center-column"><div class="image-container"><img src="img/squ.png" height="200" width="200"/></div></div>
+            <div class="image-container"><img Id="roud" src="img/bram.png" height="240" width="200"/></div>
+            <div class="image-container"><img Id="vigin" src="img/Wolf.png" height="240" width="200"/></div>
+            <div class="image-container"><img Id="sqer" src="img/Herman.png" height="240" width="200"/></div>
         </div>
 
         <div class="row">
-            <div class="left-column"><div class="image-container"><img src="img/hex.png" height="200" width="200"/></div></div>
-            <div class="right-column"><div class="image-container"><img src="img/rec.png" height="200" width="200"/></div></div>
-            <div class="center-column"><div class="image-container"><img src="img/sta.png" height="200" width="200"/></div></div>
+            <div class="image-container"><img Id="christ" src="img/charl.png" height="240" width="200"/></div>
+            <div class="image-container"><img Id="osca" src="img/Oscsar.png" height="240" width="200"/></div>
+            <div class="image-container"><img Id="janu" src="img/Jane.png" height="240" width="200"/></div>
         </div>
 
         <div class="row">
-            <div class="left-column"><div class="image-container"><img src="img/trr.png" height="200" width="200"/></div></div>
-            <div class="right-column"><div class="image-container"><img src="img/sqr.png" height="200" width="200"/></div></div>
-            <div class="center-column"><div class="image-container"><img src="img/her.png" height="200" width="200"/></div></div>
+            <div class="image-container"><img Id=shell src="img/Shelly.png" height="240" width="200"/></div>
+            <div class="image-container"><img Id=train src="img/agatha.png" height="240" width="200"/></div>
+            <div class="image-container"><img Id=farm src="img/Orwell.png" height="240" width="200"/></div>
         </div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.1.2/buzz.min.js"></script>
@@ -59,19 +43,71 @@
             const wiggle = new buzz.sound ("w6 s1/PaperWiggle2.wav")
             const door = new buzz.sound ("w6 s1/door2.wav")
 
-            document.getElementById ("roud").onpointerover = () => {
+
+            const bram = document.getElementById ("roud")
+
+            bram.onpointerover = () => {
                 console.log("hello world")
                 wiggle.play ()
+                bram.src = 'img/Braculer.png'
             }
+            bram.onpointerout = () => bram.src = 'img/bram.png'
 
-            const grab = document.getElementById ("sqer")
-
-            grab.onpointerdown = () => {
+            const whale = document.getElementById ("sqer")
+            whale.onpointerover = () => {
                 door.play ()
-                grab.src = 'img/Herman.png'
+                whale.src = 'img/Moby.png'
              }
-             grab.onpointerup = () => grab.src = 'img/tri.png'
+             whale.onpointerout = () => whale.src = 'img/Herman.png'
 
+             const wolf = document.getElementById ("vigin")
+            wolf.onpointerover = () => {
+                door.play ()
+                wolf.src = 'img/Lighthouse.png'
+             }
+             wolf.onpointerout = () => wolf.src = 'img/Wolf.png'
+
+            const chrise = document.getElementById ("christ")
+            chrise.onpointerover = () => {
+                door.play ()
+                chrise.src = 'img/Carol.png'
+             }
+             chrise.onpointerout = () => chrise.src = 'img/charl.png'
+
+            const osac = document.getElementById ("osca")
+            osac.onpointerover = () => {
+                door.play ()
+                osac.src = 'img/Dorian.png'
+             }
+             osac.onpointerout = () => osac.src = 'img/Oscsar.png'
+
+            const aust = document.getElementById ("janu")
+            aust.onpointerover = () => {
+                door.play ()
+                aust.src = 'img/Pride.png'
+             }
+             aust.onpointerout = () => aust.src = 'img/Jane.png'
+
+            const fran = document.getElementById ("shell")
+            fran.onpointerover = () => {
+                door.play ()
+                fran.src = 'img/Frank.png'
+             }
+             fran.onpointerout = () => fran.src = 'img/Shelly.png'
+
+            const comu = document.getElementById ("farm")
+            comu.onpointerover = () => {
+                door.play ()
+                comu.src = 'img/Animal.png'
+             }
+             comu.onpointerout = () => comu.src = 'img/Orwell.png'
+
+            const murd = document.getElementById ("train")
+            murd.onpointerover = () => {
+                door.play ()
+                murd.src = 'img/Orient.png'
+             }
+             murd.onpointerout = () => murd.src = 'img/agatha.png'
 
         </script>
 
