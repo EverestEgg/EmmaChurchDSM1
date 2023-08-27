@@ -4,6 +4,7 @@
     <head>
         <title>Classic Authors-Books and Biography</title>
         <style>
+        
             .row{
                 width:720px;
                 margin: 10px auto 10px auto ;
@@ -13,12 +14,16 @@
                 vertical-align: middle;
                 padding:20px;
             }
+            .toprow{
+                width:720px;
+                margin: 70px auto 10px auto ;
+            }
         </style>
     </head>
 
     <body>
 
-        <div class="row">
+        <div class="toprow">
             <div class="image-container"><img Id="roud" src="img/Bram.png" height="240" width="200"/></div>
             <div class="image-container"><img Id="vigin" src="img/Wolf.png" height="240" width="200"/></div>
             <div class="image-container"><img Id="sqer" src="img/Herman.png" height="240" width="200"/></div>
@@ -40,74 +45,87 @@
 
         <script>
 
-            const wiggle = new buzz.sound ("w6 s1/PaperWiggle2.wav")
-            const door = new buzz.sound ("w6 s1/door2.wav")
-
+            const bell = new buzz.sound ("sound/bells.wav")
+            const paint = new buzz.sound ("sound/brush.wav")
+            const wave = new buzz.sound ("sound/oceanhouse.wav")
+            const piano = new buzz.sound ("sound/piano.wav")
+            const oink = new buzz.sound ("sound/pig.wav")
+            const cuga = new buzz.sound ("sound/train.wav")
+            const fishy = new buzz.sound ("sound/whale.wav")
+            const bark = new buzz.sound ("sound/wolf.wav")
+            const zip = new buzz.sound ("sound/zap.wav")
+ 
 
             const bram = document.getElementById ("roud")
 
             bram.onpointerover = () => {
                 console.log("hello world")
-                wiggle.play ()
+                bark.play ()
                 bram.src = 'img/Braculer.png'
             }
             bram.onpointerout = () => bram.src = 'img/Bram.png'
 
             const whale = document.getElementById ("sqer")
             whale.onpointerover = () => {
-                door.play ()
+                fishy.play ()
                 whale.src = 'img/Moby.png'
              }
              whale.onpointerout = () => whale.src = 'img/Herman.png'
 
              const wolf = document.getElementById ("vigin")
             wolf.onpointerover = () => {
-                door.play ()
+                wave.play ()
                 wolf.src = 'img/Lighthouse.png'
              }
              wolf.onpointerout = () => wolf.src = 'img/Wolf.png'
 
             const chrise = document.getElementById ("christ")
             chrise.onpointerover = () => {
-                door.play ()
+                bell.play ()
                 chrise.src = 'img/Carol.png'
              }
              chrise.onpointerout = () => chrise.src = 'img/charl.png'
 
             const osac = document.getElementById ("osca")
             osac.onpointerover = () => {
-                door.play ()
+                paint.play ()
                 osac.src = 'img/Dorian.png'
              }
              osac.onpointerout = () => osac.src = 'img/Oscsar.png'
 
             const aust = document.getElementById ("janu")
             aust.onpointerover = () => {
-                door.play ()
+                piano.play ()
                 aust.src = 'img/Pride.png'
              }
              aust.onpointerout = () => aust.src = 'img/Jane.png'
 
             const fran = document.getElementById ("shell")
             fran.onpointerover = () => {
-                door.play ()
+                zip.play ()
                 fran.src = 'img/Frank.png'
              }
              fran.onpointerout = () => fran.src = 'img/Shelly.png'
 
             const comu = document.getElementById ("farm")
             comu.onpointerover = () => {
-                door.play ()
+                oink.play ()
                 comu.src = 'img/Animal.png'
              }
              comu.onpointerout = () => comu.src = 'img/Orwell.png'
 
             const murd = document.getElementById ("train")
             murd.onpointerover = () => {
-                door.play ()
+                cuga.play ()
                 murd.src = 'img/Orient.png'
              }
              murd.onpointerout = () => murd.src = 'img/agatha.png'
+
+        document.body.onpointerdown = () => {
+          if (buzz.audioCtx.state != `running`) {
+             buzz.audioCtx.resume ()
+            }
+         }
 
         </script>
 
